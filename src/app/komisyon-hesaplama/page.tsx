@@ -26,7 +26,7 @@ const internalLinks = [
 const faqData = [
   {
     question: "Emlakçı komisyon oranı ne kadardır?",
-    answer: "Gayrimenkul satışında komisyon oranı her taraf için %2'dir (toplam %4). Kiralama işlemlerinde ise bir ay kira bedeli kadar komisyon alınır ve bu tutar yalnızca kiracı tarafından ödenir. Bu oranlar emlakçılık mevzuatına dayanır.",
+    answer: "Gayrimenkul satışında komisyon oranı her taraf için %2'dir (toplam %4). Kiralama işlemlerinde ise en fazla bir ay kira bedeli + KDV kadar komisyon alınır. Yönetmeliğe göre bu bedel aksi kararlaştırılmadıkça ev sahibi ve kiracı arasında eşit paylaşılır; ancak piyasa uygulamasında bu tutarı genellikle kiracı öder.",
   },
   {
     question: "Komisyon KDV dahil mi yoksa hariç mi ödenir?",
@@ -34,11 +34,11 @@ const faqData = [
   },
   {
     question: "Komisyon kimin tarafından ödenir?",
-    answer: "Satış işlemlerinde hem alıcı hem de satıcı kendi emlakçısına (veya ortak emlakçıya) komisyon öder. Kiralama işlemlerinde komisyon yalnızca kiracı tarafından ödenir; ev sahibinin komisyon ödeme yükümlülüğü bulunmaz.",
+    answer: "Satış işlemlerinde hem alıcı hem de satıcı kendi emlakçısına (veya ortak emlakçıya) komisyon öder. Kiralama işlemlerinde yönetmeliğe göre komisyon, aksi kararlaştırılmadıkça ev sahibi ve kiracı arasında eşit paylaşılır; ancak piyasa uygulamasında bedeli genellikle kiracı öder.",
   },
   {
-    question: "Kira komisyonunu kim öder?",
-    answer: "Kiralama işlemlerinde emlak komisyonu kiracı tarafından ödenir, ev sahibinin komisyon ödeme yükümlülüğü bulunmaz.",
+    question: "Kira komisyonunu kim öder, ev sahibi mi kiracı mı?",
+    answer: "Yasal düzenlemeye göre komisyon, aksi kararlaştırılmadıkça ev sahibi ve kiracı arasında eşit paylaştırılır. Ancak uygulamada bu bedel genellikle tamamen kiracı tarafından ödenmektedir. Kiralama öncesinde emlak danışmanınızla bu konuyu netleştirmeniz önerilir.",
   },
   {
     question: "Komisyon ne zaman ödenir?",
@@ -116,8 +116,13 @@ Toplam = Komisyon + KDV`}</pre>
 
                   <h4 className="font-medium text-foreground">Kiralama İşlemleri</h4>
                   <p>
-                    Kiralama işlemlerinde komisyon <strong>1 ay kira bedeli</strong> kadardır ve yalnızca
-                    kiracı tarafından ödenir. Ev sahibinden komisyon alınmaz.
+                    Kiralama işlemlerinde komisyon <strong>en fazla 1 ay kira bedeli + KDV</strong> kadardır.
+                    Taşınmaz Ticareti Hakkında Yönetmelik&apos;e göre bu bedel, aksi yazılı olarak kararlaştırılmadıkça
+                    ev sahibi ile kiracı arasında <strong>eşit paylaştırılır</strong>.
+                  </p>
+                  <p>
+                    Ancak piyasa uygulamasında bu bedel neredeyse her zaman <strong>kiracı</strong> tarafından karşılanır.
+                    Kesin uygulama, emlak danışmanınızla yapacağınız sözleşmede belirlenir.
                   </p>
                   <pre className="bg-surface-alt p-3 rounded-md font-mono text-sm overflow-x-auto">{`Komisyon = Aylık Kira Bedeli
 KDV = Komisyon × 0.20
@@ -197,8 +202,8 @@ Toplam = Komisyon + KDV`}</pre>
               </table>
             </div>
             <p className="text-sm">
-              Satışta alıcı ve satıcının her biri %2 komisyon öder. Kiralamada komisyon yalnızca kiracıdan alınır;
-              taraflar arası bir bölünme söz konusu değildir.
+              Satışta alıcı ve satıcının her biri %2 komisyon öder. Kiralamada yönetmeliğe göre komisyon ev sahibi ile
+              kiracı arasında eşit paylaştırılır; ancak piyasa uygulamasında bu bedeli genellikle kiracı öder.
             </p>
 
             <h3 className="text-xl font-semibold text-foreground">KDV Hesaplaması</h3>
@@ -216,8 +221,14 @@ Toplam = Komisyon + KDV`}</pre>
 
             <h3 className="text-xl font-semibold text-foreground">Kiralama Komisyonu</h3>
             <p>
-              Kiralama işlemlerinde komisyon, <strong>bir ay kira bedeli</strong> kadardır ve bu tutarı <strong>yalnızca kiracı</strong>
-              öder. Satış işlemlerindeki gibi bir bölünme söz konusu değildir; ev sahibinin komisyon ödeme yükümlülüğü bulunmaz.
+              Kiralama işlemlerinde komisyon bedeli <strong>en fazla 1 aylık kira bedeli + KDV</strong> kadardır.
+              Taşınmaz Ticareti Hakkında Yönetmelik&apos;e göre, kiralama işlemlerinde komisyon bedeli, aksi yazılı
+              olarak kararlaştırılmadıkça ev sahibi ile kiracı arasında eşit paylaştırılır.
+            </p>
+            <p>
+              Piyasa uygulamasında ise bu bedel <strong>neredeyse her zaman kiracı</strong> tarafından karşılanır;
+              hesaplayıcımız varsayılan olarak kiracının ödeyeceği komisyonu tek sonuç olarak gösterir. Kesin uygulama,
+              emlak danışmanınızla yapacağınız sözleşmede belirlenir.
             </p>
 
             <h3 className="text-xl font-semibold text-foreground">Ödeme Zamanı ve Şekli</h3>

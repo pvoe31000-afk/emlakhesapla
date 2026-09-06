@@ -138,7 +138,7 @@ export default function KomisyonClient() {
             <p id="bedel-hint" className="form-hint">
               {islemTuru === "satis"
                 ? "Gayrimenkul satış bedeli. Her iki taraf (alıcı/satıcı) için ayrı hesaplanır."
-                : "Aylık kira bedeli. Komisyon 1 ay kira bedeli kadardır ve yalnızca kiracı tarafından ödenir."}
+                : "Aylık kira bedeli. Komisyon en fazla 1 ay kira bedeli + KDV kadardır; piyasa uygulamasında bu bedeli genellikle kiracı öder."}
             </p>
           </div>
 
@@ -222,8 +222,9 @@ export default function KomisyonClient() {
                 </p>
               ) : (
                 <p>
-                  <strong>Not:</strong> Kiralama işlemlerinde komisyon yalnızca kiracı tarafından ödenir;
-                  ev sahibinin komisyon ödeme yükümlülüğü bulunmaz.
+                  <strong>Not:</strong> Varsayılan sonuç piyasa uygulamasını yansıtır: kiralama komisyonunu (en fazla
+                  1 aylık kira + KDV) genellikle kiracı öder. Yönetmeliğe göre bu bedel aksi kararlaştırılmadıkça ev sahibi
+                  ve kiracı arasında eşit paylaştırılır; kesin uygulama sözleşmenizde belirlenir.
                 </p>
               )}
             </div>
